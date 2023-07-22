@@ -8,17 +8,13 @@ class ExpensesApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: MyHomePage());
+    return MaterialApp(
+      home: MyHomePage(),
+    );
   }
 }
 
 class MyHomePage extends StatelessWidget {
-
-
-
-
-  //const MyHomePage({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,7 +36,6 @@ class MyHomePage extends StatelessWidget {
           ),
           /*Container responsavel pelo estilo do AppBr */
           TransactionUser(),
-
         ],
       ),
     );
