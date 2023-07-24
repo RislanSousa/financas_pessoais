@@ -23,20 +23,27 @@ class MyHomePage extends StatelessWidget {
         elevation: 10,
         title: Text('Despesas pessoais'),
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: <Widget>[
-          Container(
-            width: double.infinity,
-            child: Card(
-              color: Colors.deepOrange,
-              child: Text('Grafico'),
-              elevation: 5,
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+
+            /*Involvendo 'Colum' com componente 'with widget' substituindo 'Wdget'
+             por SingleChildScrollView (Visualização de rolagem de filho unico)
+            componente responsavel pro tornar tela scroll */
+
+            Container(
+              width: double.infinity,
+              child: Card(
+                color: Colors.deepOrange,
+                child: Text('Grafico'),
+                elevation: 5,
+              ),
             ),
-          ),
-          /*Container responsavel pelo estilo do AppBr */
-          TransactionUser(),
-        ],
+            /*Container responsavel pelo estilo do AppBr */
+            TransactionUser(),
+          ],
+        ),
       ),
     );
   }
