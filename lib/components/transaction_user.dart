@@ -63,8 +63,6 @@ class _TransactionUserState extends State<TransactionUser> {
     ), //Transaction
   ];
 
-
-
   _addTransaction(String title, double value) {
     final newTransaction = Transaction(
       id: Random().nextDouble().toString(),

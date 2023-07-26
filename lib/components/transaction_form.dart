@@ -34,7 +34,7 @@ class TransactionForm extends StatelessWidget {
               onPressed: () {
                 final title = titleController.text;
                 final value = double.tryParse(valueController.text) ?? 0.0;
-                onSubmit(title,value);
+                onSubmit(title, value);
               },
               child: Text('Nova Transação'),
               textColor: Colors.deepOrange,
