@@ -36,20 +36,16 @@ class TransactionForm extends StatelessWidget {
             ),
             TextField(
               controller: valueController,
-              keyboardType: TextInputType.number,
+              keyboardType: TextInputType.numberWithOptions(decimal: true),
               onSubmitted:(value) => _submitForm() ,
               decoration: InputDecoration(
                 labelText: 'Valor (R\$)',
               ),
             ),
             FlatButton(
-              onPressed: () {
-                final title = titleController.text;
-                final value = double.tryParse(valueController.text) ?? 0.0;
-                onSubmit(title, value);
-              },
               child: Text('Nova Transação'),
               textColor: Colors.deepOrange,
+              onPressed: _submitForm
             ),
           ],
         ),

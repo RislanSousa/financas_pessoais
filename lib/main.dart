@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'components/transaction_user.dart';
 
 main() => runApp(ExpensesApp());
-
 class ExpensesApp extends StatelessWidget {
   const ExpensesApp({Key? key}) : super(key: key);
 
