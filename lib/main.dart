@@ -21,6 +21,12 @@ class MyHomePage extends StatelessWidget {
         backgroundColor: Colors.deepOrange,
         elevation: 10,
         title: Text('Despesas pessoais'),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.add),
+            onPressed: () {}
+          )
+        ],
       ),
       body: SingleChildScrollView(
         child: SingleChildScrollView(
@@ -45,6 +51,11 @@ class MyHomePage extends StatelessWidget {
           ),
         ),
       ),
+      floatingActionButton:  FloatingActionButton(
+        child: Icon(Icons.add),
+        onPressed:() {},
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.miniCenterFloat,
     );
   }
 }
