@@ -1,10 +1,7 @@
-//import 'package:expenses/components/transaction_form.dart';
-
 import 'package:flutter/material.dart';
-
 import 'dart:math';
-import 'components/transaction_form.dart';
-import 'components/transaction_list.dart';
+import './components/transaction_form.dart';
+import './components/transaction_list.dart';
 import 'models/transaction.dart';
 
 main() => runApp(ExpensesApp());
@@ -50,6 +47,8 @@ class _MyHomePageState extends State<MyHomePage> {
     setState(() {
       _transactions.add(newTransaction);
     });
+  Navigator.of(context).pop();
+  // Recuando formulario Modal após confirmação dos dados
   }
 
   _openTransactionFormModal(BuildContext context) {
@@ -57,6 +56,8 @@ class _MyHomePageState extends State<MyHomePage> {
         context: context,
         builder: (_) {
           return TransactionForm(_addTransaction);
+
+          //Abrindo modal apartir do openTransactionFormModal
         }
         );
   }

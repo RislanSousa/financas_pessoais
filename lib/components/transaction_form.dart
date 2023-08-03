@@ -8,10 +8,8 @@ class TransactionForm extends StatefulWidget {
   @override
   _TransactionFormState createState() => _TransactionFormState();
 }
-
 class _TransactionFormState extends State<TransactionForm> {
   final titleController = TextEditingController();
-
   final valueController = TextEditingController();
 
   _submitForm() {
@@ -24,7 +22,6 @@ class _TransactionFormState extends State<TransactionForm> {
     }
     widget.onSubmit(title, value);
   }
-
   @override
   Widget build(BuildContext context) {
     return Card(
