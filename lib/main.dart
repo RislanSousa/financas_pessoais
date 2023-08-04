@@ -11,6 +11,12 @@ class ExpensesApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: MyHomePage(),
+      theme: ThemeData(
+        primarySwatch: Colors.teal
+            /* Definindo cor primaria
+            do formato Swatch afim de explorar palheta
+             */
+      ),
     );
   }
 }
@@ -66,7 +72,6 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.deepOrange,
         elevation: 10,
         title: Text('Despesas pessoais'),
         actions: <Widget>[IconButton(icon: Icon(Icons.add),
@@ -86,7 +91,6 @@ class _MyHomePageState extends State<MyHomePage> {
               Container(
                 width: double.infinity,
                 child: Card(
-                  color: Colors.deepOrange,
                   child: Text('Grafico'),
                   elevation: 5,
                 ),
